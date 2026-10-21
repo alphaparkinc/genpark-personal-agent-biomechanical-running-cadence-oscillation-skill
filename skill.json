@@ -1,0 +1,61 @@
+{
+  "name": "genpark-personal-agent-biomechanical-running-cadence-oscillation-skill",
+  "version": "1.0.0",
+  "title": "Biomechanical Running Cadence & Vertical Oscillation Ratio Skill",
+  "description": "Biomechanical running economy, vertical oscillation vs cadence ratio, duty factor, and ground contact time balance. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "running-cadence",
+    "biomechanics",
+    "vertical-oscillation",
+    "ground-contact-time",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "analyze_running_efficiency_kinematics",
+      "description": "Evaluate running kinematics: vertical ratio %, ground contact balance, and energetic waste score.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "step_cadence_spm": {
+            "type": "integer"
+          },
+          "vertical_oscillation_cm": {
+            "type": "number"
+          },
+          "ground_contact_time_ms": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "step_cadence_spm",
+          "vertical_oscillation_cm",
+          "ground_contact_time_ms"
+        ]
+      }
+    },
+    {
+      "name": "prescribe_cadence_form_drill_remedy",
+      "description": "Synthesize metronome cadence drilling and plyometric drills to eliminate heavy heel strike.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "current_spm": {
+            "type": "integer"
+          },
+          "vertical_ratio_pct": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "current_spm"
+        ]
+      }
+    }
+  ]
+}
